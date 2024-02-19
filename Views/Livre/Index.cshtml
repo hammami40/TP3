@@ -1,0 +1,56 @@
+﻿@model List<tp3.Models.Livre>
+<h1>Liste Livres</h1>
+<table class="table-bordered">
+    <thead>
+        <tr><th>titre</th>
+             <th>Auteur</th>
+            <th>Description</th>
+             <th>Prix</th>
+             <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+            
+        
+        {
+            <tr><td>@item.Titre</td>
+            <td>@item.Auteur</td>
+            <td>@item.Description</td>
+            <td>@item.Datepublication</td> 
+                
+            <td>
+                <a class="btn btn-info"
+                asp-action="Details"
+                    asp-route-id="@item.Id">Details
+                </a>
+                    <a class="btn btn-info" asp-action="Details"
+                       asp-route-id="@item.Id">
+                        Details
+                    </a>
+            </td></tr>
+
+
+
+
+
+        }
+
+    </tbody>
+</table>
+@* @{
+    var nom = "livre1";
+
+}
+@{
+    // var nom = "livre1";
+    List<string> noms= new List<string>(){"l1","l2"};
+}
+    la date du jour @DateTime.Now
+    <p>le Livre est @nom</p>
+<ul>
+@foreach(string )
+{
+    <li>@n</li>
+}
+</ul> *@
